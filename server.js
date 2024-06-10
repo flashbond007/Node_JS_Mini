@@ -63,7 +63,7 @@ const bodyParser=require('body-parser');
 app.use(bodyParser.json()); //req body
 const Person=require('./models/Person');
 const Menuitem=require('./models/Menuitem');
-
+require('dotenv').config();
 app.get('/', function (req, res) {
     res.send('Welcome friends welcome home folks!!')
 })
@@ -75,4 +75,6 @@ app.use('/',personroutes);
 const menuroutes=require('./Routes/MenuRoutes')
 app.use('/',menuroutes);
 
-app.listen(3000,()=>{console.log('Server is live!')})
+const PORT=process.env.PORT || 3000
+
+app.listen(PORT,()=>{console.log('Server is live!')})

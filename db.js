@@ -1,8 +1,9 @@
 const mongoose=require('mongoose');
-
+require('dotenv').config();
 //set mongodb database connection with URL
 
-const mongoURL= 'mongodb://localhost:27017/hotels'  //Replace hotel with any database name of your choice
+// const mongoURL= process.env.MONGODB_URL_LOCAL //'mongodb://localhost:27017/hotels'  //Replace hotel with any database name of your choice //local URL
+const mongoURL=process.env.MONGODB_URL //'mongodb+srv://zoominthehouse:flashOO7@mycluster1.voatvxd.mongodb.net/' //Online DB Cluster URL Mongodb atlas
 
 //set up mongoose connect
 mongoose.connect(mongoURL,{

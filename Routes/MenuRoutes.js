@@ -19,7 +19,7 @@ router.get('/getmenu', async (req,res) => {
 })
 
 
-//POST ITEM FOR ADDING MENU
+//POST ITEM FOR ADDING MENU to test post
 router.post('/addmenu', async (req,res) => {
     try {
         
@@ -115,3 +115,5 @@ router.delete('/getmenu/:id', async(req,res) => {
 })
 
 module.exports=router;
+
+//comment added for testing purpose
